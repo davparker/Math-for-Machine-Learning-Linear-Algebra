@@ -1,0 +1,49 @@
+Basis, vector space, and linear independence - module 2
+
+A basis is a set of n vectors that are not linear combinations of each other, which means they are linearly independent of each other and their span, the space they describe. The space is then n dimensional. This first criteria I can write down by saying that they are linearly independent.
+
+If I can't write any of them down by taking some combination of the others. So for example, let's say I've got a vector b_1 here, by taking multiples of b_1, I can get anywhere along the 1D space of a line. If I take a second vector b_2, that isn't just a multiple of b_1, then I can get anywhere in the plane of this board by taking combinations of b_1 and b_2. Some number of b_1's plus some number of b_2's, and this is a 2D space. Now, let's take a third vector b_3. Now, for b_3 to be a valid third basis vector, it has to be impossible for me to find some numbers a_1 and a_2 such that I can satisfy this sub. So it has to be impossible for me to find b_3 at some combination of b_1's and b_2's where a_1 and a_2 are just numbers.
+
+So that lets us define what we mean by the number of linearly independent basis vectors in our space. If I had a four basis factor b_4 that wasn't a linear combination of b_1, b_2, and b_3, I'd have a four-dimensional space and so on up to as many dimensions as I like. Now, notice what my basis vectors b don't have to be. They don't have to be unit vectors by which I mean vectors of length one and they don't have to be orthogonal, that is at 90 degrees to each other. But everything is going to be much easier if they are.
+
+So if at all possible, you want to use orthonormal basis factor sets, 90 degrees of unit length. Now let's think about what happens when we map from one basis to another. The number line of the axis of the original grid then projects down onto the new grid and potentially has different values on that grid but the projection keeps the grid being evenly spaced. Therefore, any mapping we do from one set of basis vectors, from one coordinate system to another, keeps the vector space being a regularly spaced grid. Well, our original vector rules of vector addition and multiplication by a scalar still work. It doesn't [inaudible] fold space which is what the linear bit in linear algebra means. Things might be stretched or rotated or inverted, but everything remains evenly spaced and linear combinations still work.
+
+
+===coaching===
+Sure! Here are five practice questions based on the content from the lecture:
+
+1. True/False: A basis is defined as a set of vectors that can be expressed as linear combinations of each other.
+
+2. Multiple Choice: Which of the following statements is true regarding linearly independent vectors?
+
+A) They can be expressed as linear combinations of each other.
+B) They span a space that is n-dimensional.
+C) They must be unit vectors.
+D) They must be orthogonal to each other.
+
+3. Open-Ended: Explain the significance of having a third basis vector that is linearly independent from the first two basis vectors.
+
+4. Open-Ended: How does the concept of linear independence help in determining the dimensionality of a vector space?
+
+5. True/False: When mapping from one basis to another, the original vector rules of addition and scalar multiplication do not apply.
+Would you like additional questions?
+
+David - response
+1. False
+2. B,
+3. Can expand the dimensional space
+4. Allows for linearly independent vectors to span multi-dimensional space
+5. False
+
+Coach
+Great job! Let's review your answers:
+
+False: Correct! A basis is indeed a set of vectors that are not linear combinations of each other.
+
+B: Correct! Linearly independent vectors span a space that is n-dimensional.
+
+Can expand the dimensional space: Well said! A third basis vector that is linearly independent allows us to move into a higher-dimensional space.
+
+Allows for linearly independent vectors to span multi-dimensional space: Exactly! This is crucial for understanding the structure of vector spaces.
+
+False: Correct! The original vector rules of addition and scalar multiplication still apply when mapping from one basis to another.

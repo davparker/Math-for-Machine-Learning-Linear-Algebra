@@ -1,0 +1,170 @@
+Modulus & inner product - Module 2
+
+Now, we can move on to define two things; the length of a vector, also called its size, and the dot product of a vector, also called it's inner scalar or projection product.
+
+In fact, the geometric object, this thing r, just has two properties, its length and its direction that it's pointing that way. So irrespective of the coordinate system we decided to use, we want to know how to calculate these two properties of length and direction.
+
+If the coordinate system was constructed out of two unit vectors that are orthogonal to each other, like i here and j here in 2D, then we can say that r is equal to a times i, plus b times j. When I say unit about i and j, I mean that of length one, which people will often denote by putting a little hat over them like this. Then from Pythagoras, we can say that the length of r is given by the hypotenuse. So what I mean by that is, if we draw a little triangle here, then we've got this length here is ai. So if we write the length being, with these two little vertical lines, it's just of length a, because i is of length one.
+
+Vector r = ai + bj
+From Pythagoras, when coordinate i is length 1
+The size of the vector is the hypotenuse
+
+The size of r denoted by ||
+|r| = sqrt(a^2 + b^2)
+
+r = ai + bj = [a,b]
+
+r = |a|
+    |b|
+
+-so-
+
+|r| = sqrt(a^2 + b^2)
+The size of a vector is the sum of the squares of its components
+
+Can multiply 2 or more vectors using the dot product
+
+The dot product is just a number, a scalar number, about three, given by 
+multiplying the components of the vector together in tur_n, and adding those up.
+
+r.s = ri*si + rj*sj
+
+r = | 3|
+    | 2|
+
+s = |-1|
+    | 2|
+
+r.s = 3*-1 + 2*2 = 1
+
+Properties of the dot product
+
+1. dot product is commutative
+r.s = s.r
+
+2. the dot product is distributive over addition. 
+By which I mean that if I've got a third vector here now t, that r dotted with s plus t is equal to r dotted with s, 
+plus r dotted with t
+
+r.(s+t) = r.s + r.t
+
+    |r_1|
+r = |r_2|
+    |...|
+    |r_n|
+
+    |s_1|
+s = |s_2|
+    |...|
+    |s_n|
+
+    |t_1|
+t = |t_2|
+    |...|
+    |t_n|
+
+r.(s+t) = r_1(s_1+t_1) + r_2(s_2+t_2) ... r_n(s_n+t_n)
+        = r_1s_1 + r_1t_1 + r_2s_2 + r_2t_2 ... + r_ns_n + r_nt_n
+        = r.s + r.t
+
+
+3. third thing to look at is what's called associativity.
+So that is, if we take a vector, a dot product, and we've got r dotted with some multiple of s, where a is just a number, it's just a scalar number. So we're multiplying s by a scalar. What we're going to say is that, that is equal to a times r dotted with s. That means that it's associative over scalar multiplication
+
+r.(as) = a(r.s)
+
+r1(as1) + r2(as2) = a(r1s1 + r2s2) = a(r.s)
+
+
+The last thing we need to do before we can move on is, draw out a link between the dot product and the length or modulus of a vector. If I take a vector and dot it with itself, so r dotted with r, what I get is just the sums of the squares of its components. So I get r_1 times r_1, plus r_2 times r_2, and all the others if there were all the others.
+
+r.r = r_1r_1 + r_2r_2 
+    = r_1^2 + r_2^2
+    = (sqrt(r_1^2 + r_2^2)) ^ 2
+    = |r|^2
+
+So if we want to get the size of a vector, we can do that just by dotting the vector with itself and taking the square root.
+
+
+===coach===
+The dot product has several important implications in real-world applications across various fields. Here are a few key areas where it plays a significant role:
+
+1. Physics:
+Work Calculation: In physics, the dot product is used to calculate work done when a force is applied to an object. The formula is: [ \text{Work} = \text{Force} \cdot \text{Displacement} = |F| \cdot |d| \cdot \cos(\theta) ] where θ is the angle between the force and the direction of displacement. This helps determine how much energy is transferred when moving an object.
+
+2. Machine Learning:
+Similarity Measurement: In machine learning, the dot product is used to measure the similarity between data points represented as vectors. A higher dot product indicates that the vectors are more similar, which is useful in algorithms like recommendation systems and clustering.
+Neural Networks: In neural networks, the dot product is used in the calculations of weighted inputs, helping to determine the output of neurons.
+
+3. Computer Graphics:
+Lighting and Shading: The dot product helps calculate how light interacts with surfaces in 3D graphics. It determines how bright a surface appears based on the angle of the light source, which is essential for realistic rendering.
+Object Orientation: It is used to determine the orientation of objects in space, helping to create accurate animations and simulations.
+
+4. Robotics:
+Path Planning: In robotics, the dot product is used to calculate angles and directions for movement. It helps robots understand how to navigate through environments by determining the best path to take.
+
+5. Data Analysis:
+Principal Component Analysis (PCA): The dot product is used in PCA to reduce the dimensionality of data while preserving important information. This is crucial for visualizing and analyzing large datasets.
+Summary:
+
+The dot product is a powerful mathematical tool with implications in physics, machine learning, computer graphics, robotics, and data analysis. It helps in calculating work, measuring similarity, rendering graphics, planning movements, and analyzing data, making it essential in many real-world applications.
+
+
+===coach===
+The dot product and vector length are closely related through the geometric interpretation of vectors. Here are the key relationships:
+
+1. Dot Product Formula:
+
+The dot product of two vectors r and s can be expressed in terms of their lengths and the angle between them:
+[
+\text{r} \cdot \text{s} = |r| \cdot |s| \cdot \cos(\theta)
+]
+
+|r| and |s| are the lengths (magnitudes) of the vectors.
+θ is the angle between the two vectors.
+
+2. Length of a Vector:
+
+The length (or magnitude) of a vector r can be calculated using the dot product of the vector with itself:
+[
+|r| = \sqrt{\text{r} \cdot \text{r}}
+]
+
+This means that if you take the dot product of a vector with itself, you get the square of its length.
+
+3. Implications:
+
+Orthogonality: If the dot product of two vectors is zero (i.e., r · s = 0), it indicates that the vectors are orthogonal (perpendicular), which means the angle θ is 90 degrees.
+Angle Calculation: You can rearrange the dot product formula to find the angle between two vectors: 
+[ \theta = \cos^{-1}\left(\frac{\text{r} \cdot \text{s}}{|r| \cdot |s|}\right) ]
+
+Projection: The dot product can also be used to find the projection of one vector onto another, which involves the lengths of the vectors and the cosine of the angle between them.
+Summary:
+
+The dot product relates to vector length through the formula that connects the dot product to the magnitudes of the vectors and the cosine of the angle between them. Additionally, the length of a vector can be derived from its dot product with itself. This relationship is fundamental in understanding the geometry of vectors and their interactions.
+
+
+===coach===
+The formula for the dot product of two vectors r and s in a Cartesian coordinate system is given by:
+
+[
+\text{r} \cdot \text{s} = r_x \cdot s_x + r_y \cdot s_y + r_z \cdot s_z
+]
+
+Where:
+
+r = (r_x, r_y, r_z) is the first vector with components in the x, y, and z directions.
+s = (s_x, s_y, s_z) is the second vector with components in the x, y, and z directions.
+
+In Two Dimensions:
+For two-dimensional vectors, the formula simplifies to:
+
+[
+\text{r} \cdot \text{s} = r_x \cdot s_x + r_y \cdot s_y
+]
+
+Summary:
+
+The dot product is calculated by multiplying the corresponding components of the vectors and then summing those products.
+It results in a scalar (a single number) rather than a vector.

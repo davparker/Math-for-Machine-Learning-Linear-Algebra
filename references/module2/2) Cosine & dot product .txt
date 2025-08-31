@@ -1,0 +1,84 @@
+Cosine & dot product - Module 2
+
+Let's take the cosine rule from algebra, which you'll remember probably, vaguely from school. I might have said, if we had a triangle with sides a, b, and c, then what the cosine rule said was that c squared was equal to a squared plus b squared minus 2ab times the cos of the angle between a and b, cos that angle theta there.
+
+Cosine rule:
+c^2 = a^2 + b^2 - 2ab*cos(theta)
+
+Triangle with sides a, b, c
+a = r, b = s
+c = (r - s)
+
+c^2 = a^2 + b^2 - 2ab*cos(theta)
+
+|r-s|^2 = |r|^2 + |s|^2 - 2|r||s|cos(theta)
+
+|r-s|^2 = r dotted with s = (r-s)(r-s)
+
+(r-s).(r-s) = r.r - s.r -s.r -s.-s
+            = |r|^2 - 2s.r + |s|^2
+
+|r|^2 - 2s.r + |s|^2 = |r|^2 + |s|^2 - 2|r||s|cos(theta)
+               -2s.r = - 2|r||s|cos(theta)
+                2s.r = 2|r||s|cos(theta)
+                 s.r = |r||s|cos(theta)
+                 r.s = |r||s|cos(theta) 
+
+If these were both unit length vectors those will be 1 and multiplies by cos of the angle between them. It tells us something about the extent to which the two vectors go in the same direction, because if theta was 0 then cos theta would be 1, and r.s would just be the size of the two vectors multiplied together.
+
+If the size of the two vectors multiplied together. If the two vectors on the other hand we're at 90 degrees to each other, if they were, r was like this and s was like this and the angle between them, theta, was equal to 90 degrees, cos theta, cos 90 is 0, and then r.s is going to be, we can immediately see, r.s is going to be some size of r, some size of s, times 0. So if the two vectors are pointing at 90 degrees to each other, if they what's called orthogonal to each other, then the dot product it's going to give me 0.
+
+If they're both pointed in the same direction, so s was like that and the angle between them is nought. Cos of nought is equal to 1, and then r.s is equal to the mod r times mod s, just the multiplication of the two sizes together. Fun one, last fun one here, is that r and s are in opposite directions.
+
+So let's say s was now going this way, and the angle between them was a 180 degrees cos of 180, 180 degrees is equal to minus 1. So then, r.s will be equal to minus the size of r times the size of s. So what the dot product here really does with this cos, it tells us when we get the minus sign out that they're going in opposite directions.
+
+
+===coach===
+You can apply the cosine rule in practice to solve problems involving triangles, especially when you need to find a side length or an angle. Here’s how you can do it with two examples:
+
+Example 1: Finding a Side Length
+
+Problem: You have a triangle with sides a = 5 units, b = 7 units, and the angle θ = 60° between them. Find the length of side c.
+
+Solution:
+1. Use the cosine rule: 
+   [
+   c² = a² + b² - 2ab  cos(θ)
+   ]
+2. Substitute the values:
+   [
+   c² = 5² + 7² - 2  5  7  cos(60°)
+   ]
+3. Calculate:
+
+(5² = 25)
+(7² = 49)
+(cos(60°) = 0.5)
+So, (c² = 25 + 49 - 2 5 7 * 0.5)
+(c² = 25 + 49 - 35)
+(c² = 39)
+Finally, take the square root: [ c = \sqrt{39} \approx 6.24 \text{ units} ]
+
+
+Example 2: Finding an Angle
+
+Problem: You have a triangle with sides a = 8 units, b = 6 units, and c = 10 units. Find the angle θ opposite side c.
+
+Solution:
+1. Rearrange the cosine rule to solve for cos(θ):
+   [
+   cos(θ) = \frac{a² + b² - c²}{2ab}
+   ]
+2. Substitute the values:
+   [
+   cos(θ) = \frac{8² + 6² - 10²}{2  8  6}
+   ]
+3. Calculate:
+
+(8² = 64)
+(6² = 36)
+(10² = 100)
+So, (cos(θ) = \frac{64 + 36 - 100}{2 8 6})
+(cos(θ) = \frac{0}{96} = 0)
+Find the angle:
+Since (cos(θ) = 0), (θ = 90°).

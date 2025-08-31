@@ -1,0 +1,103 @@
+How matrices transform space - module 3
+
+A matrix transformation is a mathematical operation that uses a matrix to change the position, size, or orientation of a vector in space. Here are the key points:
+
+Definition: A matrix transformation takes a vector as input and produces a new vector as output by applying a matrix to it.
+
+Representation: If you have a matrix ( A ) and a vector ( \mathbf{r} ), the transformation is represented as ( \mathbf{r'} = A \mathbf{r} ), where ( \mathbf{r'} ) is the transformed vector.
+
+Types of Transformations:
+    Scaling: Changes the size of the vector.
+    Rotation: Changes the direction of the vector.
+    Shearing: Distorts the shape of the vector.
+
+Properties: Matrix transformations preserve certain properties, such as parallelism and the origin's position, meaning the grid lines remain evenly spaced and parallel.
+
+This concept is fundamental in linear algebra and is widely used in various applications, including computer graphics and machine learning.
+
+
+A matrix transformation is a mathematical operation that uses a matrix to change the position, size, or orientation of a vector in space. Here’s a simple breakdown:
+
+    Matrix: A rectangular array of numbers arranged in rows and columns. It can represent various transformations like rotation, scaling, or shearing.
+
+    Transformation: The process of changing a vector (a point in space) into a new vector by applying the matrix.
+
+When you multiply a matrix by a vector, the result is a new vector that has been transformed according to the rules defined by the matrix. This transformation can be visualized as moving or altering the vector in a specific way without bending or warping the space.
+
+For example:
+
+    If you have a matrix that scales a vector by a factor of 2, applying this transformation will double the length of the vector while keeping its direction the same.
+
+
+ Think of a matrix as a set of instructions that tells us how to stretch, shrink, or move points in a space without bending or warping it. For example, if you imagine a piece of graph paper, applying a matrix transformation is like pulling the paper in different directions while keeping the lines straight and parallel. The origin, or starting point, remains fixed, which helps us understand how the entire space is affected.
+
+To make this clearer, let’s use an analogy. Imagine you have a rubber band stretched between two points. If you pull on the rubber band, it stretches but doesn’t change shape or twist. Similarly, when we apply a matrix to a vector (which is like a point in space), we can think of it as stretching or moving that point while keeping the overall structure intact. This means that if we add two transformed vectors together, we can still use the same rules we learned about adding numbers. It’s a powerful way to visualize how matrices work!
+
+
+One of the most challenging aspects of matrix transformations is understanding composition of transformations. This involves applying multiple transformations in sequence, which can become complex. Here are a few key points that highlight the difficulty:
+
+    Order Matters: The order in which you apply transformations affects the final result. For example, rotating an object and then translating it (moving it) will yield a different outcome than translating it first and then rotating it.
+
+    Combining Matrices: When you combine multiple transformations, you often need to multiply matrices together to create a single transformation matrix. This multiplication can be tricky, especially when dealing with larger matrices.
+
+    Visualizing Changes: It can be difficult to visualize how a series of transformations affects the original shape or position of vectors in space, especially in higher dimensions.
+
+Understanding these concepts requires practice and a solid grasp of both matrix operations and geometric interpretations. 
+
+
+Composition of transformations in matrix operations refers to the process of applying multiple transformations sequentially to a vector or point in space. When you combine transformations, you can represent them as a single transformation by multiplying their corresponding matrices.
+
+Here’s how it works:
+
+    1. Multiple Transformations: Suppose you have two transformations, represented by matrices ( A ) and ( B ). Each matrix performs a specific operation, like rotation or scaling.
+
+    2. Matrix Multiplication: To apply both transformations to a vector ( v ), you multiply the matrices in the correct order. For example, if you want to apply transformation ( A ) first and then transformation ( B ), you would compute ( B \times (A \times v) ).
+
+    3. Single Transformation Matrix: You can also create a new matrix ( C ) that represents the combined effect of both transformations by calculating ( C = B \times A ). Now, you can apply the combined transformation directly to the vector: ( C \times v ).
+
+    4. Order of Operations: It's important to note that the order of multiplication matters. ( B \times A ) is generally not the same as ( A \times B ), which means the sequence in which you apply transformations will affect the final result.
+
+This concept is crucial in fields like computer graphics, robotics, and physics, where multiple transformations are often needed to manipulate objects in space.
+
+
+Changing the order of transformations in a composition can lead to different final results. This is because matrix multiplication is not commutative, meaning that ( A \times B ) is generally not the same as ( B \times A ). Here’s what happens:
+
+    1. Different Outcomes: When you apply transformations in a different order, the resulting vector or point in space will be altered differently. For example:
+
+        If you first rotate an object and then translate it, the object will move to a new position      based on its rotated orientation.
+        If you first translate the object and then rotate it, the object will rotate around a different point, leading to a different final position.
+
+    2. Geometric Interpretation: The geometric effect of each transformation depends on the current state of the object. For instance, rotating an object that has already been translated will yield a different orientation compared to rotating it before any translation.
+
+    3. Example:
+        Let’s say you have a vector ( v ) and two transformations represented by matrices ( A ) (rotation) and ( B ) (translation).
+    Applying ( B \times (A \times v) ) (translation after rotation) will yield a different result than ( A \times (B \times v) ) (rotation after translation).
+
+This highlights the importance of carefully considering the order of transformations when working with matrices. 
+
+
+===coach===
+Here are five practice questions based on the content from the lecture:
+
+1. True/False: The transformation of a vector by a matrix can result in a warped space.
+False
+
+2. Multiple Choice: What does the composition of matrix transformations refer to?
+
+A) The process of adding two matrices together.
+B) The application of one matrix transformation followed by another.
+C) The multiplication of a matrix by a scalar.
+D) The inversion of a matrix.
+B
+
+3. Open-Ended: Explain how the rules of scalar addition and multiplication for vectors affect the transformation of space when applying a matrix.
+Matrix transformations preserve scalar multiplication. They are linear. A(c\mathbf{v}) = c(A\mathbf{v})
+Matrix transformations preserve vector addition. A(\mathbf{u} + \mathbf{v}) = A\mathbf{u} + A\mathbf{v}
+
+4. Open-Ended: Describe 
+When a matrix A is applied to space, it transforms every point — and therefore every grid line — according to its linear rules
+
+5. True/False: If you multiply a vector by a scalar before applying a matrix transformation, the result will not include the scalar in the final output.
+False
+
+

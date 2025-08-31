@@ -1,0 +1,142 @@
+Applications of changing basis - module 2
+
+Understanding Data Projection and Noise in Linear Algebra
+
+In the video, we learned about how we can take a bunch of 2D data points that seem to follow a straight line and analyze them. Imagine you have a group of friends standing in a line for a photo. Each friend represents a data point, and their position along the line shows how far they are from the starting point. We can measure two things: how far each friend is along the line (like how many steps they are from the start) and how far they are from the line itself (like if someone is leaning out of the line). The distance from the line tells us how "noisy" or scattered the data is. If everyone is close to the line, it means the data is neat and organized; if they are spread out, it indicates more noise.
+
+Now, when we analyze this data, we want to find the best line that fits all these points. If the line is perfect, the distances from the line will be very small, indicating less noise. However, if the line is not a good fit, the distances will be larger, showing more noise. This concept is important in data science and machine learning because it helps us understand how well our model is performing. Just like in a photo, where we want everyone to look good and be in line, in data analysis, we want our data points to fit well along the line we create.
+
+
+Significance of Noise in Data Analysis:
+
+1. Model Performance: Noise can indicate how well a model fits the data. A model with low noise suggests a good fit, while high noise may signal that the model is not capturing the underlying patterns effectively.
+
+2. Data Quality: High levels of noise can suggest issues with data quality, such as measurement errors or outliers. Identifying and addressing noise helps improve the reliability of the analysis.
+
+3. Feature Selection: Understanding noise helps in selecting relevant features for modeling. Features with high noise may not contribute valuable information and can be excluded to simplify the model.
+
+4. Overfitting Risk: Noise can lead to overfitting, where a model learns the noise instead of the actual signal. This results in poor performance on new, unseen data.
+
+5. Insights into Variability: Analyzing noise can provide insights into the variability of the data, helping to understand the underlying processes and factors affecting the data.
+
+
+Effects of Noise on Model Performance in Data Science:
+
+1. Decreased Accuracy: Noise can lead to incorrect predictions, as the model may learn from random fluctuations rather than the actual underlying patterns in the data.
+
+2. Overfitting: When a model captures noise, it may perform well on training data but poorly on new data. This happens because the model becomes too complex, fitting the noise instead of the true signal.
+
+3. Decreased Variance: Noise can increase the variance of a model, making it sensitive to small changes in the training data. This can result in inconsistent predictions across different datasets.
+
+4. Misleading Insights: High noise levels can obscure meaningful trends and relationships in the data, leading to incorrect conclusions and insights.
+
+5. Longer Training Times: Models may take longer to train when noise is present, as they attempt to learn from irrelevant data points, which can complicate the learning process.
+
+6. Feature Importance Misinterpretation: Noise can distort the perceived importance of features, leading to the selection of irrelevant features that do not contribute to the model's predictive power.
+
+By understanding and managing noise, data scientists can improve model robustness and ensure more reliable predictions.
+
+
+Techniques to Reduce Noise in Data:
+
+1. Data Cleaning:
+
+- Remove Outliers: Identify and eliminate data points that significantly differ from the rest of the dataset.
+- Handle Missing Values: Use imputation methods or remove records with missing values to maintain data integrity.
+
+2. Smoothing Techniques:
+
+- Moving Averages: Apply moving averages to smooth out short-term fluctuations and highlight longer-term trends.
+- Gaussian Smoothing: Use Gaussian filters to reduce noise while preserving important features in the data.
+
+3. Feature Engineering:
+
+- Select Relevant Features: Use techniques like feature selection to keep only the most informative features, reducing the impact of noise.
+- Transform Features: Apply transformations (e.g., logarithmic or polynomial) to stabilize variance and reduce noise.
+
+4. Regularization:
+
+- L1/L2 Regularization: Incorporate regularization techniques in your model to penalize complexity and reduce overfitting caused by noise.
+
+5. Ensemble Methods:
+
+- Bagging and Boosting: Use ensemble techniques that combine multiple models to improve robustness and reduce the impact of noise.
+
+6. Cross-Validation:
+
+- Use Cross-Validation: Implement cross-validation to ensure that the model generalizes well and is not overly influenced by noise in the training data.
+
+By applying these techniques, you can enhance the quality of your data and improve model performance. 
+
+
+If the data points are not linear, several implications arise:
+
+- Increased Noise: The distances from the best-fit line would be larger, indicating more noise in the data. This makes it harder to identify a clear relationship between variables.
+
+- Complex Relationships: Non-linear data may require more complex models (e.g., polynomial regression, decision trees) to capture the underlying patterns effectively.
+
+- Dimensionality Issues: The projection of data points onto a line may not adequately represent the data's structure, leading to potential loss of important information.
+
+- Model Performance: Traditional linear models may perform poorly, resulting in lower accuracy and higher error rates when predicting outcomes based on the data.
+
+Understanding these aspects is crucial for selecting appropriate modeling techniques in data science and machine learning.
+
+
+===coach===
+Consider the following vectors: 
+(\mathbf{a} = \begin{bmatrix} 1 \ 2 \end{bmatrix}) and 
+(\mathbf{b} = \begin{bmatrix} 3 \ 6 \end{bmatrix}). 
+Are these vectors linearly independent or dependent? Why?
+
+\mathbf{b} = 3 \cdot \mathbf{a} = 3 \cdot \begin{bmatrix} 1\\2 \end{bmatrix} = \begin{bmatrix} 3\\6 \end{bmatrix}
+
+Excellent work! You've correctly shown that (\mathbf{b}) can be expressed as a scalar multiple of (\mathbf{a}) (specifically, (\mathbf{b} = 3 \cdot \mathbf{a})). This means that the vectors are linearly dependent.
+
+===coach===
+Imagine you have three vectors in three-dimensional space: 
+(\mathbf{a} = \begin{bmatrix} 1 \ 0 \ 0 \end{bmatrix}), 
+(\mathbf{b} = \begin{bmatrix} 0 \ 1 \ 0 \end{bmatrix}), and 
+(\mathbf{c} = \begin{bmatrix} 0 \ 0 \ 1 \end{bmatrix}). 
+Are these vectors linearly independent? Why or why not?
+
+Definition of Linear Independence
+A set of vectors is linearly independent if no vector in the set can be written as a linear combination of the others. Mathematically, for vectors \mathbf{a}, \mathbf{b}, \mathbf{c}, they are independent if the only solution to:
+x\mathbf{a} + y\mathbf{b} + z\mathbf{c} = \mathbf{0}
+is:
+x = y = z = 0
+
+So if we set:
+x\begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix} + y\begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} + z\begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}
+
+This simplifies to:
+\begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}
+
+Explanation:
+Step-by-Step Breakdown
+Let’s compute the left-hand side:
+x\begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix} + y\begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} + z\begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}
+= \begin{bmatrix} x \\ 0 \\ 0 \end{bmatrix} + \begin{bmatrix} 0 \\ y \\ 0 \end{bmatrix} + \begin{bmatrix} 0 \\ 0 \\ z \end{bmatrix}
+Now add those vectors component-wise:
+\begin{bmatrix} x \\ y \\ z \end{bmatrix}
+So the equation becomes:
+\begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}
+
+For the original equation to hold true (i.e., the linear combination equals the zero vector), each component must be zero:
+- x = 0
+- y = 0
+- z = 0
+This is the only solution, which confirms that the vectors \mathbf{a}, \mathbf{b}, \mathbf{c} are linearly independent
+
+Coach
+Exactly! You've demonstrated that the only solution to the equation 
+
+[
+x\begin{bmatrix} 1 \ 0 \ 0 \end{bmatrix} + 
+y\begin{bmatrix} 0 \ 1 \ 0 \end{bmatrix} + 
+z\begin{bmatrix} 0 \ 0 \ 1 \end{bmatrix} = 
+\begin{bmatrix} 0 \ 0 \ 0 \end{bmatrix}
+]
+
+is (x = 0), (y = 0), and (z = 0). This means that the vectors (\mathbf{a}), (\mathbf{b}), and (\mathbf{c}) are linearly independent. 
+
+This is a fundamental property of the standard basis vectors in three-dimensional space, as they span the entire space without any redundancy.

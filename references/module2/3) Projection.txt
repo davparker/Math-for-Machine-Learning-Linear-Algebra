@@ -1,0 +1,49 @@
+Projection - Module 2
+
+• Definition and Types of Projection
+    ◦ Vector Projection is the orthogonal projection of a vector a onto a straight line 
+        parallel to another non-zero vector b. The result is a new vector that points in 
+        the direction of vector b, scaled by the scalar projection. It's often denoted as 
+        projb⁡a or a∥b.
+    ◦ Scalar Projection (also called the component of b in the a direction) gives a numerical 
+        value representing the length of the "shadow" of one vector along another. It's the 
+        magnitude of the vector projection
+
+• Formulas for Calculation
+    ◦ Scalar Projection of vector S onto vector R: 
+        [ \text{Scalar Projection} = \frac{R \cdot S}{|R|} ] 
+        This formula uses the dot product of R and S, divided by the magnitude (length) of 
+        R. It can also be expressed geometrically as 
+        ‖a‖ cos θ, where θ is the angle between a and b.
+    ◦ Vector Projection of vector S onto vector R: 
+        [ \text{Vector Projection} = \frac{R \cdot S}{R \cdot R} R ] 
+        This formula involves the dot product of R and S, divided by the dot product of R
+        with itself (which is the square of its magnitude), then multiplied by vector R. 
+        Alternatively, it can be written as ( a ⋅ b̂ ) b̂, where b̂ is the unit vector in the 
+        direction of b.
+
+        ▪ For example, to find the vector projection of q = [3,0,-1] onto p = [1,2,2]
+
+            1. Compute the dot product q ⋅ p: (3)(1) + (0)(2) + (-1)(2) = 1.
+            2. Compute the magnitude squared of p: 1² + 2² + 2² = 9.
+            3. Compute the scalar projection factor: 1/9.
+            4. Multiply the scalar by vector p: (1/9) * = [1/9, 2/9, 2/9]
+
+
+for two vectors, r & s
+
+cos(theta) = adj/hupotenuse = adj/|s|
+
+-compared to def dot product
+
+r.s = |r||s|cos(theta) 
+|s|cos(theta) = adj
+r.s = |r||s|cos(theta) 
+r.s = |r|*projection
+
+Scalar Projection
+(r.s)/|r| = |s|cos(theta)  
+
+Vector Projection
+r * ((r.s)/(|r||r|)) = ((r.s)/(r.r)) * r
+

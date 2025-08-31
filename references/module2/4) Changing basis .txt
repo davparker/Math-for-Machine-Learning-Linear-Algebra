@@ -1,0 +1,176 @@
+Changing basis - module 2
+
+So the fundamentally idea. Now, if the new basis vectors, these guys b, are at 90 degrees to each other, then it turns out that projection products has a nice application. We can use the projection or dot-product to find out the numbers for r in the new basis b, so long as we know what the bs are in terms of e.
+
+But if you can arrange the new axis to be orthogonal, you should, because it makes the calculations much faster and easier to do. So you can see that if I project r down onto b1, so I look down from here, and project down at 90 degrees, I get a length here for scalar product, and that's scalar projection is the shadow of r to b1. A number of the scalar projection describes how much of this factor I need.
+
+r = 3_e1 + 4_e2 = [3,4]
+more vectors:
+b1,e = [2,1]
+b2,e = [-2,4]
+
+cos(theta) = (b1 - b2)/(|b1||b2|)
+b1 - b2 = 2(-2) + 1(4) = 0
+vectors are at right angles to each other, continue with projection
+
+(r,e * b1)/|b1|^2 = (3*2 + 4*1)/(2^2 + 1^2) = 10/5 = 2  
+- {projection will be 2 * b1}
+b1 = 2[2,1] = [4,2]
+
+(r,e * b2)/|b2|^2 = (3*-2 + 4*4)/(-2^2 + 4^2) = 10/20 = 1/2
+- {projection will be 1/2 * b2}
+((r,e * b2)/|b2|^2)*b2 = (1/2)[-2, 4] = [-1,2]
+b2 = [-1,2]
+
+[4,2] + (1/2)[-2,4]
+[4,2] + [-1,2] = [3,4]
+
+r,b = [2,1/2]
+
+
+Given the vectors 
+$$\mathbf{v} = \begin{bmatrix} 4 \ 3 \end{bmatrix}$$, 
+$$\mathbf{b_1} = \begin{bmatrix} 1 \ 2 \end{bmatrix}$$, and 
+$$\mathbf{b_2} = \begin{bmatrix} -2 \ 1 \end{bmatrix}$$, 
+
+which are orthogonal, how would you find the representation of 
+$$\mathbf{v}$$ in the basis defined by 
+$$\mathbf{b_1}$$ and 
+$$\mathbf{b_2}$$? 
+
+v[4,3]
+b_1[1,2]
+b_2[-2,1]
+
+(b1 - b2) = (1*-2 + 2*1) = 0 {orthogonal}
+
+Projection v,b1
+(v,b1 * b1)/|b1|^2 = (4*1 + 3*2)/(1^2 + 2^2) = 10/5 = 2
+- {projection in terms of b1 will be 2}
+$$\mathbf{b_1}$$ = [2,4]
+
+Projection v,b2
+(v,b2 * b2)/|b2|^2 = (4*-2 + 3*1)/(-2^2 + 1^1) = -5/5 = -1
+- {projection in terms of b2 will be -1}
+$$\mathbf{b_2}$$ = [2,-1]
+
+
+===Problem 1===
+v = [5,-1]  b1 = [1,1]   b2 = [1,-1]
+
+Two vectors \mathbf{a} and \mathbf{b} are orthogonal if their dot product is zero:
+\mathbf{a} \cdot \mathbf{b} = a_1b_1 + a_2b_2 = 0
+
+\mathbf{b}_1 \cdot \mathbf{b}_2:
+1 + (-1) = 0  {orthogonal}
+
+
+(v,b * b1)/|b1|^2 = (5*1 + -1*1)/(1^2 + 1^2) = 4/2 = 2
+(r,e * b2)/|b2|^2 = (5*1 + -1*-1)/(1^2 + -1^2) = 6/2 = 3
+
+vb = [2,3]
+
+
+Step 1: Use Projection Formula
+For each basis vector \mathbf{b}_i, compute:
+c_i = \frac{\mathbf{v} \cdot \mathbf{b}_i}{\mathbf{b}_i \cdot \mathbf{b}_i}
+Then:
+\mathbf{v} = c_1 \mathbf{b}_1 + c_2 \mathbf{b}_2
+
+Step 2: Compute Coefficients
+For \mathbf{b}_1:
+- \mathbf{v} \cdot \mathbf{b}_1 = 5(1) + (-1)(1) = 4
+- \mathbf{b}_1 \cdot \mathbf{b}_1 = 1^2 + 1^2 = 2
+- c_1 = \frac{4}{2} = 2
+
+For \mathbf{b}_2:
+- \mathbf{v} \cdot \mathbf{b}_2 = 5(1) + (-1)(-1) = 5 + 1 = 6
+- \mathbf{b}_2 \cdot \mathbf{b}_2 = 1^2 + (-1)^2 = 2
+- c_2 = \frac{6}{2} = 3
+
+
+Final Answer
+In the basis \{ \mathbf{b}_1, \mathbf{b}_2 \}, the vector \mathbf{v} is:
+\boxed{
+\mathbf{v}_{\text{new basis}} = \begin{bmatrix} 2 \\ 3 \end{bmatrix}
+}
+This means:
+\mathbf{v} = 2 \mathbf{b}_1 + 3 \mathbf{b}_2
+vb = [2,3]
+
+
+===Problem 2===
+v = [10,-5] | b1 = [3,4] | b2 = [4,-3]
+
+For \mathbf{b}_1:
+- \mathbf{v} \cdot \mathbf{b}_1 = 10(3) + (-5)(4) = 30 - 20 = 10
+- \mathbf{b}_1 \cdot \mathbf{b}_1 = 3^2 + 4^2 = 25
+- c_1 = \frac{10}{25} = 2/5
+
+For \mathbf{b}_2:
+- \mathbf{v} \cdot \mathbf{b}_2 = 10(4) + -5(-3) = 55
+- \mathbf{b}_2 \cdot \mathbf{b}_2 = 4^2 + -3^2 = 25
+- c_2 = \frac{55}{25} = 11/5
+
+Answer: vb = [2/5,11/5]
+
+
+===Problem3===
+v = [2,2] | b1 = [-3,1] | b2 = [1,3]
+
+For \mathbf{b}_1:
+- \mathbf{v} \cdot \mathbf{b}_1 = 2(-3) + 2(1) = -4
+- \mathbf{b}_1 \cdot \mathbf{b}_1 = -3^2 + 1^2 = 10
+- c_1 = \frac{-4}{10} = -2/5
+
+For \mathbf{b}_2:
+- \mathbf{v} \cdot \mathbf{b}_2 = 2(1) + 2(3) = 8
+- \mathbf{b}_2 \cdot \mathbf{b}_2 = 1^2 + 3^2 = 10
+- c_2 = \frac{8}{10} - 4/5
+
+Answer: vb = [-2/5,4/5]
+
+
+===Problem4===
+v = [1,1,1] | b1 = [2,1,0] | b2 = [1,-2,-1] | b3 = [-1,2,-5]
+
+For \mathbf{b}_1:
+- \mathbf{v} \cdot \mathbf{b}_1 = 1(2) + 1(1) + 1(0) = 3
+- \mathbf{b}_1 \cdot \mathbf{b}_1 = 2^2 + 1^2 + 0^2 = 5
+- c_1 = \frac{3}{5} = 3/5
+For \mathbf{b}_2:
+- \mathbf{v} \cdot \mathbf{b}_2 = 1(1) + 1(-2) + 1(-1) = -2
+- \mathbf{b}_2 \cdot \mathbf{b}_2 = 1^2 + -2^2 + -1^2 = 6
+- c_2 = \frac{-2}{6} = -1/3
+For \mathbf{b}_3:
+- \mathbf{v} \cdot \mathbf{b}_3 = 1(-1) + 1(2) + 1(-5) = -4
+- \mathbf{b}_3 \cdot \mathbf{b}_3 = -1^2 + 2^2 + -5^2 = 30
+- c_3 = \frac{-4}{30} = -2/15
+
+Answer vb = [3/5,-1/3,-2/15]
+
+
+===Problem5===
+v = [1,1,2,3] | b1 [1,0,0,0] | b2 = [0,2,-1,0] | b3 = [0,1,2,0] | b4 = [0,0,0,3]
+
+For \mathbf{b1}:
+- \mathbf{v} \cdot \mathbf{b}_1 = 1(1) + 1(0) + 2(0) + 3(0) = 1
+- \mathbf{b}_1 \cdot \mathbf{b}_1 = 1^2 + 0^2 + 0^2 + -^2 = 1
+- c_1 = \frac{1}{1} = 1
+
+For \mathbf{b2}:
+- \mathbf{v} \cdot \mathbf{b}_2 = 1(0) + 1(2) + 2(-1) + 3(0) = 0
+- \mathbf{b}_2\cdot \mathbf{b}_2= 0^2 + 2^2 + -1^2 + 0^2 = 5
+- c_2= \frac{0}{5} = 0
+
+For \mathbf{b3}:
+- \mathbf{v} \cdot \mathbf{b}_3= 1(0) + 1(1) + 2(2) + 1(0) = 5
+- \mathbf{b}_3\cdot \mathbf{b}_3= 0^2 + 1^2 + 2^2 + 0^2 = 5
+- c_3 = \frac{5}{5} = 5/5 = 1
+
+For \mathbf{b4}:
+- \mathbf{v} \cdot \mathbf{b}_4= 1(0) + 1(0) + 1(0) + 3(3) = 9
+- \mathbf{b}_4\cdot \mathbf{b}_4= 0^2 + 0^2 + 0^2 + 3^2 = 9
+- c_4 = \frac{9}{9} = 1
+
+Answer: [1,0,1,1]
