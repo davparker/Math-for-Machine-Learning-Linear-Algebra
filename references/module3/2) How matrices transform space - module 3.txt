@@ -100,4 +100,23 @@ When a matrix A is applied to space, it transforms every point — and therefore
 5. True/False: If you multiply a vector by a scalar before applying a matrix transformation, the result will not include the scalar in the final output.
 False
 
+===coach===
+6. Fill in the Blank: When a matrix ( A ) is applied to a vector ( r ), the resulting vector is often denoted as ( r' ) or __.
+Ar
 
+7. Multiple Choice: Which of the following statements is true regarding matrix multiplication?
+
+A) Matrix multiplication is commutative.
+B) The order of multiplication does not matter.
+C) Matrix multiplication is associative.
+D) None of the above.
+C
+
+8. Open-Ended: Provide an example of a matrix transformation and describe how it alters a given vector.
+Let's say you have an image and you need to rotate it. This can be accomplished by applying a matrix transformation that rotates the image.
+Or, you havec an image and you need to scale the size. A matrix transformation can be applied to scale the image.
+
+9. True/False: The basis vectors ( e1 ) and ( e2 ) remain unchanged after a matrix transformation.
+False
+
+10. Open-Ended: Discuss the significance of eigenvalues and eigenvectors in the context of matrix transformations.
